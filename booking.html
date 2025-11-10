@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flash - Select Service</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="booking-body">
+  <div class="booking-page">
+    <div class="locations">
+      <div><i class="fas fa-map-marker-alt"></i> <span id="pickup-text">Pickup</span></div>
+      <div><i class="fas fa-location-dot"></i> <span id="drop-text">Drop</span></div>
+    </div>
+    
+    <h2>Select Service</h2>
+    <div class="underline" style="background:#f59e0b;"></div>
+    
+    <div class="service-list">
+      <div class="service-item active">
+        <img src="img/Bike.jpg" alt="Bike"> Bike <span>₹69 - ₹84</span>
+      </div>
+      <div class="service-item">
+        <img src="img/cabeconomy.jpg" alt="Cab"> Cab Economy <span>₹179 - ₹218</span>
+      </div>
+      <div class="service-item">
+        <img src="img/auto.jpg" alt="Auto"> Auto <span>₹127 - ₹156</span>
+      </div>
+      <div class="service-item">
+        <img src="img/cabpremium.jpg" alt="Premium"> Cab Premium <span>₹187 - ₹228</span>
+      </div>
+    </div>
+    
+    <div class="payment">
+      <button>Cash</button>
+    </div>
+    
+    <button class="continue-btn">Continue Booking</button>
+  </div>
+
+  <script>
+    document.getElementById('pickup-text').innerText = localStorage.getItem('pickup') || 'Pickup Location';
+    document.getElementById('drop-text').innerText = localStorage.getItem('drop') || 'Drop Location';
+    
+    document.querySelectorAll('.service-item').forEach(item => {
+      item.addEventListener('click', () => {
+        document.querySelectorAll('.service-item').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
+    
+    document.querySelector('.continue-btn').addEventListener('click', () => {
+      alert('FLASH Captain is on the way! Estimated time: 3 mins');
+    });
+  </script>
+</body>
+</html>

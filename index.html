@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flash - Punjab Da No.1 Ride</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  
+  <!-- Geoapify Autocomplete -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@geoapify/geocoder-autocomplete@^1/styles/geocoder-autocomplete.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@geoapify/geocoder-autocomplete@^1/geocoder-autocomplete.min.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="logo">
+      <img src="img/logo.png" alt="FLASH" class="flash-logo">
+    </a>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Safety</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="overlay">
+      <h1>Bharat Moves On <span>FLASH!</span></h1>
+      <div class="form-group">
+        <div class="input-wrapper">
+          <i class="fas fa-map-marker-alt"></i>
+          <div id="pickup-autocomplete" class="geoapify-autocomplete-input">
+            <input type="text" placeholder="Enter Pickup Location" />
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <i class="fas fa-location-dot"></i>
+          <div id="drop-autocomplete" class="geoapify-autocomplete-input">
+            <input type="text" placeholder="Enter Drop Location" />
+          </div>
+        </div>
+        <button class="book-btn" id="book-now">Book Ride</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="underline"></div>
+    <div class="grid">
+      <div class="card"><img src="img/Bike.jpg" alt="Bike"><p>Bike</p></div>
+      <div class="card"><img src="img/auto.jpg" alt="Auto"><p>Auto</p></div>
+      <div class="card"><img src="img/autoshare.jpg" alt="Auto Share"><p>Auto Share</p></div>
+      <div class="card"><img src="img/parcel.jpg" alt="Parcel"><p>Parcel</p></div>
+      <div class="card"><img src="img/cabeconomy.jpg" alt="Cab Economy"><p>Cab Economy</p></div>
+      <div class="card"><img src="img/cabpremium.jpg" alt="Cab Premium"><p>Cab Premium</p></div>
+    </div>
+  </section>
+
+  <!-- Ride Section -->
+  <section class="ride">
+    <div class="content">
+      <h2>Get Quick Rides,<br>Low Fares</h2>
+      <div class="underline"></div>
+      <p>In Flash we ensure our customers get rides quickly at the most affordable prices.</p>
+      <a href="#" class="btn">Book a ride</a>
+    </div>
+    <img src="img/s1.jpg" alt="Ride" class="ride-img">
+  </section>
+
+  <!-- Earn Section -->
+  <section class="earn">
+    <img src="img/p1.jpg" alt="Earn" class="earn-img">
+    <div class="content">
+      <h2>Flexible Hours &<br>High Earnings</h2>
+      <div class="underline"></div>
+      <p>Join as a Flash captain and earn on your own terms. Drive whenever you want.</p>
+      <a href="#" class="btn">Start Earning</a>
+    </div>
+  </section>
+
+  <!-- Safety -->
+  <section class="safety">
+    <div class="content">
+      <h2>Safety for all</h2>
+      <div class="underline"></div>
+      <p>At Flash, your safety is our priority. We're dedicated to making every ride safe and comfortable.</p>
+      <a href="#" class="know-more">Know More</a>
+    </div>
+    <img src="img/safety.jpg" alt="Safety" class="safety-img">
+  </section>
+
+  <!-- Download -->
+  <section class="download">
+    <h2>Download Now</h2>
+    <div class="underline"></div>
+    <div class="apps">
+      <div class="app">
+        <img src="img/rapidocaptain.jpg" alt="Flash App">
+        <p>Flash: Bike-Taxi,<br>Auto & Cabs</p>
+      </div>
+      <div class="app">
+        <img src="img/rapidocaptain.jpg" alt="Captain App">
+        <p>Flash Captain:<br>Drive & Earn</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social -->
+  <div class="social">
+    <hr>
+    <div class="icons">
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <hr>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <a href="#" class="footer-logo-link">
+        <img src="img/logo.png" alt="FLASH" class="flash-logo-footer">
+      </a>
+      <div class="footer-links">
+        <div class="link-column">
+          <h4>Home</h4>
+          <ul>
+            <li><a href="#">Safety</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="link-column">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Customer Terms</a></li>
+          </ul>
+        </div>
+        <div class="link-column">
+          <h4>Careers</h4>
+          <ul>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Captain Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
