@@ -1,0 +1,217 @@
+/* booking.css - 100% RAPIDO ORIGINAL (BOTTOM BAR EXACTLY BELOW CAB PREMIUM) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #111;
+  min-height: 100vh;
+  padding-bottom: 110px; /* Space for fixed bottom bar */
+  line-height: 1.5;
+}
+
+.booking-container {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 20px 20px;
+  background: #fff;
+}
+
+/* LOCATION BOX */
+.location-box {
+  background: #f8f9fa;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 24px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.location-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.location-item:last-child { margin-bottom: 0; }
+
+.location-item i {
+  font-size: 22px;
+  margin-top: 2px;
+}
+
+.pickup-icon { color: #10b981; }
+.drop-icon { color: #ef4444; }
+
+.location-text strong {
+  display: block;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.location-text span {
+  color: #666;
+  font-size: 15px;
+}
+
+/* TITLE */
+.section-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 24px 0 8px;
+}
+
+.underline {
+  height: 4px;
+  width: 70px;
+  background: #f59e0b;
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+
+/* SERVICE LIST - CAB PREMIUM LAST */
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 0; /* No extra space below last service */
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  background: #f9fafb;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-item.active {
+  background: #fff9f0;
+  border-color: #f59e0b;
+  box-shadow: 0 8px 25px rgba(245,158,11,0.3);
+  transform: translateY(-4px);
+}
+
+.service-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.service-left img {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.service-name {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.service-price {
+  font-weight: 800;
+  font-size: 19px;
+  color: #111;
+}
+
+/* BOTTOM BAR - EXACTLY BELOW CAB PREMIUM */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 16px 20px;
+  box-shadow: 0 -8px 30px rgba(0,0,0,0.15);
+  border-top: 1px solid #eee;
+  z-index: 999;
+}
+
+.bottom-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* LEFT: CASH & UPI */
+.payment-options {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.payment-btn {
+  padding: 12px 20px;
+  border: 2px solid #e5e7eb;
+  background: #f8f9fa;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  color: #374151;
+}
+
+.payment-btn.active {
+  background: #f59e0b;
+  border-color: #f59e0b;
+  color: #000;
+  box-shadow: 0 6px 20px rgba(245,158,11,0.4);
+}
+
+/* MIDDLE: CONTINUE BOOKING (BIG RECTANGLE) */
+.continue-btn-fixed {
+  flex: 1;
+  background: #f59e0b;
+  color: #000;
+  font-weight: 900;
+  font-size: 18px;
+  padding: 16px 28px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 28px rgba(245,158,11,0.45);
+  min-width: 220px;
+}
+
+.continue-btn-fixed:hover {
+  background: #f97316;
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(249,115,22,0.6);
+}
+
+.continue-btn-fixed:active {
+  transform: translateY(-2px);
+}
+
+/* MOBILE PERFECT */
+@media (max-width: 480px) {
+  .booking-container { padding: 16px 16px; }
+  .bottom-bar { padding: 12px 16px; }
+  .payment-btn { font-size: 13px; padding: 10px 16px; }
+  .continue-btn-fixed { font-size: 17px; padding: 14px 22px; }
+}

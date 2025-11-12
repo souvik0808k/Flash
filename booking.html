@@ -3,55 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Flash - Select Service</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Flash - Book Your Ride</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="booking.css"/>
 </head>
-<body class="booking-body">
-  <div class="booking-page">
-    <div class="locations">
-      <div><i class="fas fa-map-marker-alt"></i> <span id="pickup-text">Pickup</span></div>
-      <div><i class="fas fa-location-dot"></i> <span id="drop-text">Drop</span></div>
+<body>
+
+  <div class="booking-container">
+    <!-- LOCATIONS -->
+    <div class="location-box">
+      <div class="location-item">
+        <i class="fas fa-map-marker-alt pickup-icon"></i>
+        <div class="location-text">
+          <strong id="pickup-text">Phagwara, Punjab</strong>
+          <span id="pickup-sub">Phagwara, Punjab, India</span>
+        </div>
+      </div>
+      <div class="location-item">
+        <i class="fas fa-location-dot drop-icon"></i>
+        <div class="location-text">
+          <strong id="drop-text">Jalandhar</strong>
+          <span id="drop-sub">Jalandhar, Punjab, India</span>
+        </div>
+      </div>
     </div>
-    
-    <h2>Select Service</h2>
-    <div class="underline" style="background:#f59e0b;"></div>
-    
+
+    <!-- SELECT SERVICE -->
+    <h2 class="section-title">Select Service</h2>
+    <div class="underline"></div>
+
     <div class="service-list">
       <div class="service-item active">
-        <img src="img/Bike.jpg" alt="Bike"> Bike <span>₹69 - ₹84</span>
+        <div class="service-left">
+          <img src="img/Bike.jpg" alt="Bike">
+          <div class="service-name">Bike</div>
+        </div>
+        <div class="service-price">₹69 - ₹84</div>
       </div>
       <div class="service-item">
-        <img src="img/cabeconomy.jpg" alt="Cab"> Cab Economy <span>₹179 - ₹218</span>
+        <div class="service-left">
+          <img src="img/cabeconomy.jpg" alt="Cab">
+          <div class="service-name">Cab Economy</div>
+        </div>
+        <div class="service-price">₹179 - ₹218</div>
       </div>
       <div class="service-item">
-        <img src="img/auto.jpg" alt="Auto"> Auto <span>₹127 - ₹156</span>
+        <div class="service-left">
+          <img src="img/auto.jpg" alt="Auto">
+          <div class="service-name">Auto</div>
+        </div>
+        <div class="service-price">₹127 - ₹156</div>
       </div>
       <div class="service-item">
-        <img src="img/cabpremium.jpg" alt="Premium"> Cab Premium <span>₹187 - ₹228</span>
+        <div class="service-left">
+          <img src="img/cabpremium.jpg" alt="Premium">
+          <div class="service-name">Cab Premium</div>
+        </div>
+        <div class="service-price">₹187 - ₹228</div>
       </div>
     </div>
-    
-    <div class="payment">
-      <button>Cash</button>
+
+    <!-- NO EXTRA SPACE - BOTTOM BAR WILL COME EXACTLY BELOW CAB PREMIUM -->
+  </div>
+
+  <!-- FIXED BOTTOM BAR - EXACTLY BELOW CAB PREMIUM -->
+  <div class="bottom-bar">
+    <div class="bottom-bar-content">
+      <div class="payment-options">
+        <button class="payment-btn active">Cash</button>
+        <button class="payment-btn">UPI / Wallet</button>
+      </div>
+      <button class="continue-btn-fixed">Continue Booking</button>
     </div>
-    
-    <button class="continue-btn">Continue Booking</button>
   </div>
 
   <script>
-    document.getElementById('pickup-text').innerText = localStorage.getItem('pickup') || 'Pickup Location';
-    document.getElementById('drop-text').innerText = localStorage.getItem('drop') || 'Drop Location';
-    
+    // Load from localStorage
+    const pickup = localStorage.getItem('pickup') || 'Phagwara, Punjab';
+    const drop = localStorage.getItem('drop') || 'Jalandhar';
+
+    document.getElementById('pickup-text').innerText = pickup;
+    document.getElementById('pickup-sub').innerText = pickup + ', India';
+    document.getElementById('drop-text').innerText = drop;
+    document.getElementById('drop-sub').innerText = drop + ', Punjab, India';
+
+    // Service click
     document.querySelectorAll('.service-item').forEach(item => {
       item.addEventListener('click', () => {
         document.querySelectorAll('.service-item').forEach(i => i.classList.remove('active'));
         item.classList.add('active');
       });
     });
-    
-    document.querySelector('.continue-btn').addEventListener('click', () => {
+
+    // Payment click
+    document.querySelectorAll('.payment-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.payment-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+
+    // Confirm button
+    document.querySelector('.continue-btn-fixed').addEventListener('click', () => {
       alert('FLASH Captain is on the way! Estimated time: 3 mins');
     });
   </script>

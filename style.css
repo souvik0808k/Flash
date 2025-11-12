@@ -1,6 +1,6 @@
 /* ========================================
-   FLASH - ULTIMATE FINAL VERSION (Nov 10, 2025)
-   LOGO ROUNDED + INPUT 100% WORKING + 550+ LINES
+   FLASH - ULTIMATE FINAL VERSION (Nov 12, 2025)
+   LOGO ROUNDED + INPUT 100% WORKING + 650+ LINES
    PUNJAB READY | RAPIDO CLONE | NO ERRORS
    ======================================== */
 
@@ -168,12 +168,8 @@ body {
   z-index: 2;
 }
 
-/* INPUT 100% WORKING + TYPING ENABLED */
-.geoapify-autocomplete-input {
-  width: 100%;
-}
-
-.geoapify-autocomplete-input input {
+/* INPUT STYLE - 100% PURANA EPIC EFFECT */
+.location-input-field {
   width: 100%;
   padding: 24px 24px 24px 72px;
   border: 3px solid #e0e0e0;
@@ -185,7 +181,7 @@ body {
   box-shadow: 0 6px 20px rgba(0,0,0,0.06);
 }
 
-.geoapify-autocomplete-input input:focus {
+.location-input-field:focus {
   border-color: #f59e0b;
   box-shadow: 0 0 0 8px rgba(245,158,11,0.3);
   transform: scale(1.03);

@@ -4,14 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Flash - Punjab Da No.1 Ride</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QMSNJ3QER"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9QMSNJ3QER');
+  </script>
+
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  
-  <!-- Geoapify Autocomplete -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@geoapify/geocoder-autocomplete@^1/styles/geocoder-autocomplete.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/@geoapify/geocoder-autocomplete@^1/geocoder-autocomplete.min.js"></script>
 </head>
 <body>
 
@@ -33,22 +38,18 @@
     </ul>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero - TERA PURANA EPIC POPUP CARD -->
   <section class="hero">
     <div class="overlay">
       <h1>Bharat Moves On <span>FLASH!</span></h1>
       <div class="form-group">
         <div class="input-wrapper">
           <i class="fas fa-map-marker-alt"></i>
-          <div id="pickup-autocomplete" class="geoapify-autocomplete-input">
-            <input type="text" placeholder="Enter Pickup Location" />
-          </div>
+          <input type="text" placeholder="Enter Pickup Location" id="pickup-input" class="location-input-field">
         </div>
         <div class="input-wrapper">
           <i class="fas fa-location-dot"></i>
-          <div id="drop-autocomplete" class="geoapify-autocomplete-input">
-            <input type="text" placeholder="Enter Drop Location" />
-          </div>
+          <input type="text" placeholder="Enter Drop Location" id="drop-input" class="location-input-field">
         </div>
         <button class="book-btn" id="book-now">Book Ride</button>
       </div>
@@ -122,9 +123,9 @@
   <div class="social">
     <hr>
     <div class="icons">
-      <a href="#"><i class="fab fa-x-twitter"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.instagram.com/flash861784/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/SouvikC39672" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.facebook.com/people/Souvik-Chattaraj/pfbid02rrLyhnPDVP7jy6knAsLgmRzs4jy3S63bHJ71jWd7psQixk33iziGNu6vjeNMBDLCl/" target="_blank"><i class="fab fa-facebook"></i></a>
     </div>
     <hr>
   </div>
